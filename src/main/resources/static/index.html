@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div class="container mt-5">
+    <h2>Kjøp billett</h2>
+
+    <form id="billettSkjema">
+        <div class="form-group">
+            <label for="filmvalg">Filmvalg:</label>
+            <select class="form-control" id="filmvalg" required>
+                <option value="">Velg film</option>
+                <option value="film1"> Porco Rosso</option>
+                <option value="film2">Akira</option>
+                <option value="film3">Mononoke</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="antall">Antall:</label>
+            <input type="number" class="form-control" id="antall" required>
+        </div>
+        <div class="form-group">
+            <label for="navn">Navn:</label>
+            <input type="text" class="form-control" id="navn" required>
+        </div>
+        <div class="form-group">
+            <label for="etternavn">Etternavn:</label>
+            <input type="text" class="form-control" id="etternavn" required>
+        </div>
+        <div class="form-group">
+            <label for="tlf">Telefon:</label>
+            <input type="text" class="form-control" id="tlf" required>
+        </div>
+        <div class="form-group">
+            <label for="epost">E-post:</label>
+            <input type="email" class="form-control" id="epost" required>
+        </div>
+        <span id="mld"></span>
+        <button type="submit" class="btn btn-primary" onclick="registrerBillett()">Kjøp billett</button>
+    </form>
+
+    <hr>
+
+    <h2>Alle billetter</h2>
+    <div id="billetoversikt"></div>
+
+    <button id="slettAlle" class="btn btn-danger">Slett alle billetter</button>
+</div>
+
 </body>
 </html>
